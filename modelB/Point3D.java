@@ -1,6 +1,6 @@
 import java.lang.Math;
 
-public class Point3D extends Point2D
+public class Point3D extends Point
 {
    protected double zValue;
 
@@ -10,8 +10,18 @@ public class Point3D extends Point2D
       this.zValue = z;
    }
 
-   public double distanceFromZero()
+   public double getDistanceFromZero()
    {
-      return Math.sqrt(this.xValue*this.xValue + this.yValue*this.yValue + this.zValue*this.zValue);
+      Point3D zero = new Point3D(0,0,0);
+      return this.getDistance(zero);
    }
+
+   public double getDistance(Point3D point)
+   {
+      double deltaX = point.xValue - this.xValue;
+      double deltaY = point.yValue - this.yValue;
+      double deltaZ = point.zValue - this.zValue;
+      return Math.sqrt(deltaX * deltaX + deltaY * deltaY + deltaZ * deltaZ);
+   }
+
 }

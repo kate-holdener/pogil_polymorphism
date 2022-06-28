@@ -2,7 +2,7 @@ public class Driver
 {
    public static void main(String []args)
    {
-      Point2D center = new Point2D(0,0);
+      Point center = new Point(0,0);
       System.out.println("Center's X value is " + center.getX());
       System.out.println("Center's Y value is " + center.getY());
 
