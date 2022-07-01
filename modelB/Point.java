@@ -23,14 +23,6 @@ public class Point
 
    public double getDistanceFromZero()
    {
-      Point zero = new Point(0,0);
-      return this.getDistance(zero);
-   }
-
-   public double getDistance(Point point)
-   {
-      double xDelta = this.xValue - point.xValue;
-      double yDelta = this.yValue - point.yValue;
-      return Math.sqrt(xDelta * xDelta + yDelta * yDelta);
+      return Math.sqrt(this.xValue * this.xValue + this.yValue * this.yValue);
    }
 }
