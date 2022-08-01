@@ -10,6 +10,11 @@ public class Point3D extends Point
       this.zValue = z;
    }
 
+   public double getZ()
+   {
+      return this.zValue;
+   }
+
    public double getDistanceFromZero()
    {
       return Math.sqrt(this.xValue * this.xValue + this.yValue * this.yValue + this.zValue * this.zValue);
